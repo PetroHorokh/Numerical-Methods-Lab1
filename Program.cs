@@ -1,5 +1,8 @@
 ﻿using Lab1;
 
+Console.Write("Enter degree of accuracy: ");
+var power = Console.ReadLine();
+
 double[,] A =
 {
     {0.38,- 0.05, 0.01, 0.02, 0.07 },
@@ -10,6 +13,6 @@ double[,] A =
 };
 double[] f = [2.32, 2.544, -3.238, 1.534, 0.12];
 double[] x = [0, 0, 0, 0, 0];
-var e = 1E-10;
+var e = Convert.ToDouble($"1E-{power}");
 
 GaussIterationMethod.IterationFunction(A, f, x, e);
