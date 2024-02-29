@@ -2,8 +2,9 @@
 
 public static class GaussIterationMethod
 {
-    public static void IterationFunction(double[,] A, double[] f, double[] x, double e)
+    public static void IterationFunction(double[,] A, double[] f, double e)
     {
+        double[] x = [0, 0, 0, 0, 0];
         int counter = 0;
         int n = x.Length;
         double norm;
